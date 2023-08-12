@@ -9,7 +9,7 @@
 
 // let num:number = NaN;
 // // num = 20 + 'istekhar'
-// //  num = 30 
+// //  num = 30
 //  console.log(num)
 // sum(5, 10);
 
@@ -17,7 +17,7 @@
 // let Name:string = 'istekhar lets lern TypeScript'
 // let last:string = 'khan'
 
-// let Length:number = Name.length; 
+// let Length:number = Name.length;
 
 // let myFullName:string;
 
@@ -44,7 +44,7 @@
 //      }
 // }
 // const iseven =(a:number):boolean=>  {
-//     return a % 4 === 0 ||  a % 8  === 0  
+//     return a % 4 === 0 ||  a % 8  === 0
 // }
 
 // const big:bigint = 4937389739875834834n
@@ -60,7 +60,7 @@
 //      if(arr[i] > max){
 //       max = arr[i];
 //      }
-// } 
+// }
 
 // console.log(max);
 
@@ -74,13 +74,13 @@
 
 // }
 
-// const avgReduce = (...arg:number[])=> {
-//    if(arg.length === 0 ){
-//       return 0 
-//    }
+// const avgReduce = (...arg: number[]) => {
+//     if (arg.length === 0) {
+//         return 0
+//     }
 
-//    const sum =  arg.reduce((index, element)=> index + element, 0 )
-//    return sum / arg.length
+//     const sum = arg.reduce((acc, currVal) => acc + currVal, 0)
+//     return sum / arg.length
 // }
 
 // console.log(avgReduce(1,2,3,4,5));
@@ -140,3 +140,90 @@
 
 // console.log(arr1[1])
 
+//! Day 3 =>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//? Type Alias 
+
+
+type Product = {
+    Name: string;
+    price: number;
+    quantity: number;
+    discount?: string; // optional property .... 
+}
+
+const product1: Product = {
+    Name: 'laptop',
+    price: 10000,
+    quantity: 5000
+}
+const product2: Product = {
+    Name: 'laptop',
+    price: 10000,
+    quantity: 5000
+}
+
+const total = (pro: Product) => {
+    return `total cost is ${pro.price * pro.quantity}`
+}
+
+console.log(total(product1))
+
+
+//? Function or Method call signature ......
+
+//*  defining the type and no of method of object or a function is called ........
+
+
+type Student = {
+    name: string;
+    age: number;
+    gender?: string;
+    greet: (countary: string) => string;
+}
+
+const student: Student = {
+    name: 'istekahar',
+    age: 21,
+    greet(countary) {
+        return `Hello my name is ${student.name} and i am ${student.age} years old. I am from ${countary}`
+    },
+}
+
+console.log(student.greet('india'));
+
+
+//? Enums ...............................
+//* enums is used when we have multiple values of  single propertiy.. 
+// for ex - 
+
+enum Roles {
+    user = 'user',
+    admin = 'admin'
+}
+
+type user = {
+    userId: string;
+    password: string;
+    role: string
+}
+
+const Ethan: user = {
+    userId: 'EhtanGamer',
+    password: 'ethan',
+    role: Roles.user
+}
+
+const istekhar: user = {
+    userId: 'istekhar46',
+    password: 'istekhar46',
+    role: Roles.admin
+}
+
+const Authorization = (user: user) => {
+   const  { userId, role } = user
+    return role=== 'user' ? `${userId} is user not authorized`  : `${userId} is admin, authorized.`
+}
+
+
+console.log(Authorization(Ethan))
+console.log(Authorization(istekhar))
