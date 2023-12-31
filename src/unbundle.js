@@ -77,7 +77,7 @@ const array = (obj) => {
         const value = obj[key];
        return [key, value];
     })
-    // console.log(ans)
+    console.log(ans)
     return ans;
 }
 
