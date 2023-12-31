@@ -1,58 +1,58 @@
-function add(a, b) {
-    return a + b;
-}
+// function add(a, b) {
+//     return a + b;
+// }
 
-console.log(add(2, "6"))
+// console.log(add(2, "6"))
 
-function pelindrom(str) {
-    return str === str.split('').reverse().join('');
-
-
-}
-
-console.log(pelindrom("ana"))
-
-let arr = [4, 6, 5, 3, 2]
-
-console.log(arr.filter(item => item % 2 === 0))
-console.log(arr)
-const fact = (num) => {
-    if (num === 1 || num === 0) {
-        return 1;
-    }
-    else {
-        return num * fact(num - 1);
-    }
-}
-
-console.log(fact(3));
-
-const func = ()=>{
-    const a = new FormData();
-    a.append('name', 'istekhar')
-    a.append('name', 'istekhar')
-    console.log(a);
-
-}
-
-func();
-
-const test = new Promise((resoleve, reject) => {
-    resoleve("promise done!!")
-})
+// function pelindrom(str) {
+//     return str === str.split('').reverse().join('');
 
 
-const check = async () => {
-    const val = await test;
-    console.log(val)
-    return val;
+// }
 
-}
-check().then(res=> console.log(res))
+// console.log(pelindrom("ana"))
 
-console.log(check());
+// let arr = [4, 6, 5, 3, 2]
 
-console.log(check().then(res => console.log(res)));
+// console.log(arr.filter(item => item % 2 === 0))
+// console.log(arr)
+// const fact = (num) => {
+//     if (num === 1 || num === 0) {
+//         return 1;
+//     }
+//     else {
+//         return num * fact(num - 1);
+//     }
+// }
+
+// console.log(fact(3));
+
+// const func = ()=>{
+//     const a = new FormData();
+//     a.append('name', 'istekhar')
+//     a.append('name', 'istekhar')
+//     console.log(a);
+
+// }
+
+// func();
+
+// const test = new Promise((resoleve, reject) => {
+//     resoleve("promise done!!")
+// })
+
+
+// const check = async () => {
+//     const val = await test;
+//     console.log(val)
+//     return val;
+
+// }
+// check().then(res=> console.log(res))
+
+// console.log(check());
+
+// console.log(check().then(res => console.log(res)));
 /*
 input =>
 object = {
